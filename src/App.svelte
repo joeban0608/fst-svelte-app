@@ -4,7 +4,9 @@
 	// import CustomEvent from "./components/CustomEvent.svelte";
 	// let completed = false
 	// import GetUser from "./components/GetUser.svelte";
-	import BindDemo from "./components/BindDemo.svelte";
+	// import BindDemo from "./components/BindDemo.svelte";
+
+  import LifeCircleDemo from "./components/LifeCircleDemo.svelte";
 
 </script>
 
@@ -16,4 +18,5 @@
 {/if} -->
 
 <!-- <GetUser username="joeban0608"/> -->
-<BindDemo />
+<!-- <BindDemo /> -->
+<LifeCircleDemo />
