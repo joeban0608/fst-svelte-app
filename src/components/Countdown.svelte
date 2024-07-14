@@ -9,6 +9,9 @@
 	export let conutDown = 10;
 	let timer = null;
 	
+  // arr
+  const arr = [1,2,3,4,5];
+
 	// 00:01 displayValue 不足兩位自動補 0
 	// 透過 $: 當元件更新重新渲染 displayValue, 沒加 $: displayValue 會不動
 	$: displayValue = `00:${conutDown.toString().padStart(2,"0")}`
@@ -39,4 +42,9 @@
 
 {#if conutDown === 0}
 	<span>時間到!!!!</span>
+  <br/>
 {/if}
+
+{#each arr as num}
+  <span>{`Number:${num}`}</span><br/>
+{/each}
