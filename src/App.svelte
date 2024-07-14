@@ -3,7 +3,9 @@
 	// import OnClickDemo from "./components/OnClickDemo.svelte";
 	// import CustomEvent from "./components/CustomEvent.svelte";
 	// let completed = false
-	import GetUser from "./components/GetUser.svelte";
+	// import GetUser from "./components/GetUser.svelte";
+	import BindDemo from "./components/BindDemo.svelte";
+
 </script>
 
 <!-- <Countdown conutDown={10}></Countdown>
@@ -13,4 +15,5 @@
 	<span>{`completed is ${completed}, 結束了`}</span>
 {/if} -->
 
-<GetUser username="joeban0608"/>
+<!-- <GetUser username="joeban0608"/> -->
+<BindDemo />

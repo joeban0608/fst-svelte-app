@@ -1,0 +1,13 @@
+<script>
+  import { onMount } from "svelte";
+
+  let name = 'world'
+  $: console.log('name', name)
+  onMount(()=> {
+    setTimeout(()=>{
+       name += '!!!!!!'
+    },2000)
+  })
+</script>
+
+<input type="text" bind:value={name}/>
