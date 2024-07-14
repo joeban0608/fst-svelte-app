@@ -21,7 +21,7 @@
 <input type="radio" bind:group={selected} value={3}/>
 {selected} -->
 
-<script>
+<!-- <script>
   import { onMount } from "svelte";
 
   let canvas;
@@ -39,4 +39,13 @@
   }
 </style>
 
-<canvas bind:this={canvas} bind:clientWidth={width}/>
+<canvas bind:this={canvas} bind:clientWidth={width}/> -->
+
+<script>
+
+  let time = 0; // 初始化 time 为 0
+
+  $: console.log('time 變化:', time); 
+</script>
+
+<audio src="jacinto-1.mp3" bind:currentTime={time} controls></audio>
