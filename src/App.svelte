@@ -1,30 +1,28 @@
 <script>
-	export let name;
+	import { onMount, afterUpdate, onDestroy } from 'svelte'
+	let conutDown = 10;
+	let timer = null;
+	
+	onMount(()=>{
+		timer = setInterval(()=>{
+			conutDown -=1;
+		},1000)
+	})
+
+	afterUpdate(()=>{
+		if (!timer) return;
+		if (conutDown === 0) {
+			clearInterval(timer);
+			timer = null;
+		}
+	})
+
+	// 當使用者中途離開時要清除 timer, 避免 memory leak
+	onDestroy(()=>{
+		if (!timer) return;
+		clearInterval(timer);
+	})
+	
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<h1>{conutDown}</h1>
