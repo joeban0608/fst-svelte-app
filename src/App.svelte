@@ -35,3 +35,6 @@
 
 <h1>{displayValue}</h1>
 
+{#if conutDown === 0}
+	<span>時間到!!!!</span>
+{/if}
