@@ -13,7 +13,10 @@
 <input type="text" bind:value={name}/> -->
 
 <script>
-  let selected = false
+  let selected = 1
   $: console.log('selected', selected)
 </script>
-<input type="checkbox" bind:checked={selected}/>
+<input type="radio" bind:group={selected} value={1}/>
+<input type="radio" bind:group={selected} value={2}/>
+<input type="radio" bind:group={selected} value={3}/>
+{selected}
