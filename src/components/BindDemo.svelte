@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { onMount } from "svelte";
 
   let name = 'world'
@@ -10,4 +10,10 @@
   })
 </script>
 
-<input type="text" bind:value={name}/>
+<input type="text" bind:value={name}/> -->
+
+<script>
+  let selected = false
+  $: console.log('selected', selected)
+</script>
+<input type="checkbox" bind:checked={selected}/>
